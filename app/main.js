@@ -1,3 +1,5 @@
+'use strict';
+
 require.config({
   paths: {
     'angular': '../vendor/angular/angular/angular'
@@ -8,11 +10,4 @@ require.config({
       exports: 'angular'
     }
   }
-});
-
-require([
-  'angular',
-  './app'
-], function (angular) {
-  
 });

@@ -2,18 +2,35 @@
   "name": "MyBlogClient",
   "version": "0.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "author": "Fan Zhang",
   "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
   "devDependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-jade": "^1.1.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "jade": "~1.11.0",
     "jshint": "^2.9.1",
-    "require-dir": "^0.3.0"
+    "morgan": "~1.6.1",
+    "require-dir": "^0.3.0",
+    "serve-favicon": "~2.3.0"
   }
 }

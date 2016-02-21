@@ -1,0 +1,32 @@
+h1 Join #{title}
+h4 Create your personal account.  
+br
+form(name='signupForm' ng-submit='processForm()')
+  div(class='form-group' ng-class="{'has-error': (signupForm.username.$invalid || hasExisted) && verify.username, 'has-success': (signupForm.username.$valid || !hasExisted) && verify.username}")
+    p
+      strong Username
+    input(type='text' required ng-minlength='4' ng-model='formData.username' name='username' ng-blur="verify('username')")
+    span(class='help-block' ng-show='signupForm.username.$error.required && verify.username') 
+      strong Username is required.
+    span(class='help-block' ng-show='signupForm.username.$error.minlength && verify.username') 
+      strong Username should not be less than 4 characters.
+    span(class='help-block' ng-show='!signupForm.username.$invalid && hasExisted && verify.username')
+      strong Username has existed.
+    span(class='help-block' ng-show='!signupForm.username.$invalid && !hasExisted && verify.username')
+      strong Username can be used.
+  div(class='form-group' ng-class="{'has-error': signupForm.email.$invalid && verify.email}")
+    p 
+      strong Email Address
+    input(type='email' ng-model='formData.email' name='email' ng-blur="verify('email')")
+    span(class='help-block' ng-show='signupForm.email.$invalid')
+      strong Should be an email.
+  div(class='form-group' ng-class="{'has-error': signupForm.password.$invalid && verify.password}")
+    p
+      strong Password
+    input(type='password' required ng-minlength='4' ng-model='formData.password' name='password' ng-blur="verify('password')")
+    span(class='help-block' ng-show='signupForm.password.$error.required && verify.password') 
+      strong Password is required.
+    span(class='help-block' ng-show='signupForm.password.$error.minlength && verify.password') 
+      strong Password should not be less than 4 characters.
+  br
+  button(type='submit' class='btn-success' ng-click='verifyForm()') Create an account

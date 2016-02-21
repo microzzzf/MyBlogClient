@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 
 gulp.task('watch', function () {
-  gulp.watch('app/views/templates/*.jade', ['render']);
-  gulp.watch('app/styles/less/*.less', ['less']);
+  gulp.watch('public/javascripts/app/modules/**/*.jade', ['render']);
+  gulp.watch('public/stylesheets/less/*.less', ['less']);
+  //gulp.watch(['**/*.js', '!./public/javascripts/vendor/**/*.js', '!./node_modules/**/*.js'], ['lint']);
 });

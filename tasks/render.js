@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 
 gulp.task('render', function () {
-  return gulp.src('app/views/templates/*.jade')
+  gulp.src('public/javascripts/app/modules/**/*.jade')
     .pipe(jade())
-    .pipe(gulp.dest('app/views/rendered_templates'));
+    .pipe(gulp.dest('public/javascripts/app/modules'));
 });

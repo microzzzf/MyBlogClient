@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/stylesheets/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/css/app.css')
+    script(src='/javascripts/vendor/require/require.js' defer async='true' data-main='/javascripts/app/main')
+    title=title
+  body
+    include header
+
+    div(class='container' ng-view)
+        block content
+
+    include footer
